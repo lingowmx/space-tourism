@@ -8,14 +8,14 @@ import desktopBackgroundDefault from "../../../assets/Crew/background-crew-deskt
 export const CrewLayout = ({children}) => {
   return (
     <MainLayout>
-      <div className="w-full h-full absolute">
+      <div className="w-full h-full absolute  share-regular">
         <picture className="">
           <source srcSet={mobileBackgroundDefault} media="(max-width: 371px)"/>
           <source srcSet={tabletBackgroundDefault} media="(min-width: 372px and max-width: 1023px)"/>
           <source srcSet={desktopBackgroundDefault} media="(max-width: 1280px)"/>
           <img src={mobileBackgroundDefault} alt="mobile-background" className="w-full h-full object-cover"/>
         </picture>
-        <div className="absolute z-10 top-28">
+        <div className="absolute z-10 top-28 w-full px-4">
           {children}
         </div>  
       </div>  
