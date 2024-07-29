@@ -16,7 +16,7 @@ export const Technology = () => {
   };
   return (
     <TechnologyLayout>
-      <div className="lg:flex">
+      <div className="sm:text-xl lg:flex">
         <section className="lg:w-[600px] lg:pl-24">
           <h2 className="text-white flex max-w-96 place-content-around text-2xl tracking-wide mb-4 lg:justify-start lg:gap-16">
             <span>03</span>
@@ -36,19 +36,23 @@ export const Technology = () => {
                     }`}
                     // style={{ listStyleType: "disc", marginLeft: "20px" }}
                   >
-                    {tech.number}
+                    <div>
+                      <span className="sm:hidden lg:block">{tech.number}</span>
+                      <span className="lg:hidden">{tech.name}</span>
+                    </div>
+                     
                   </li>
                 ))}
               </ul>
             </div>
             {selectedTechnology && (
               <>
-                <div className="lg:px-12">
+                <div className="sm:px-8 lg:px-12">
                   <p className="text-md">The terminology...</p>
                   <h3 className="text-3xl mb-4 share-regular-italic">
                     {selectedTechnology.name}
                   </h3>
-                  <p className="text-center mb-4 tracking-widest lg:text-start">
+                  <p className="text-center h-48 tracking-widest lg:text-start">
                     {selectedTechnology.description}
                   </p>
                 </div>
@@ -57,7 +61,7 @@ export const Technology = () => {
           </div>
         </section>
         <section className="lg:w-[400px]">
-          <div className="flex justify-end">
+          <div className="flex justify-center">
             {selectedTechnology && (
               <>
                 <img

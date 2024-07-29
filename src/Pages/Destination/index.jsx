@@ -16,7 +16,7 @@ export const Destination = () => {
   };
   return (
     <DestinationLayout>
-      <div className="lg:flex">
+      <div className="sm:text-2xl lg:flex">
         <section className="lg:w-[500px]">
           <h2 className="text-white flex max-w-96 place-content-around text-2xl tracking-wide mb-4 lg:max-w-ful lg:px-10">
             <span>01</span>
@@ -57,18 +57,18 @@ export const Destination = () => {
                 <h2 className="mx-auto mb-4 text-5xl share-regular-italic lg:text-6xl">
                   {selectedDestination.name}
                 </h2>
-                <p className="text-center mb-4 lg:text-xl lg:text-left lg:pb-8 lg:border-solid border-b-4 border-gray-400">
+                <p className="text-center h-36 lg:text-xl lg:text-left lg:pb-8 lg:border-solid border-b-4 border-gray-400">
                   {selectedDestination.description}
                 </p>
                 <br className="border-4 border-gray-400 border-solid" />
                 <div className="flex flex-row w-full place-content-around">
                   <div className="w-[120px]">
-                    <p className="text-sm">Avg. Distance</p>
-                    <p className="text-xl">{selectedDestination.distance}</p>
+                    <p className="text-sm sm:text-base">Avg. Distance</p>
+                    <p className="text-xl sm:text-2xl">{selectedDestination.distance}</p>
                   </div>
                   <div className="w-[120px]">
-                    <p className="text-sm">Est. Travel Time</p>
-                    <p className="text-xl">{selectedDestination.travel}</p>
+                    <p className="text-sm sm:text-base">Est. Travel Time</p>
+                    <p className="text-xl sm:text-2xl">{selectedDestination.travel}</p>
                   </div>
                 </div>
               </>

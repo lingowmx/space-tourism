@@ -16,54 +16,57 @@ export const Crew = () => {
 
   return (
     <CrewLayout>
-      <div className="lg:flex place-content-center">
-        <section className="lg:w-[500px] lg:pl-24">
-          <h2 className="text-white flex max-w-96 place-content-around text-2xl tracking-wide mb-4 lg:max-w-ful lg:mt-4 lg:mb-32 lg:justify-start lg:gap-16">
+      <div className="flex flex-col sm:text-2xl sm:px-4 lg:flex-row place-content-center">
+        <section className="sm:px-4 lg:w-[500px]">
+          <h2 className="text-white flex max-w-96 place-content-around text-2xl tracking-wide mb-4 lg:max-w-ful lg:mt-4 lg:mb-8  lg:gap-16">
             <span>02</span>
             <p>Meet our crew</p>
           </h2>
           <div>
             {selectedCrew && (
               <>
-                <h3 className="text-lg text-white mb-4 lg:text-4xl">{selectedCrew.role}</h3>
+                <h3 className="text-lg text-white mb-4 lg:text-4xl">
+                  {selectedCrew.role}
+                </h3>
                 <p className="text-3xl text-white mb-4 share-regular-italic lg:text-6xl lg:mb-16">
                   {selectedCrew.name}
                 </p>
-                <p className="mb-12 text-white tracking-widest">{selectedCrew.bio}</p>
+                <p className="mb-6 h-40  text-white tracking-widest">
+                  {selectedCrew.bio}
+                </p>
               </>
             )}
           </div>
-          <div>
-            <ul className="flex text-white justify-start">
-              {crew.map((member) => (
-                <li
-                  key={member.name}
-                  onClick={() => handleSelectCrew(member)}
-                  className={`${
-                    selectedCrew?.name === member.name ? "text-blue-400" : ""
-                  }`}
-                  style={{
-                    listStyleType: "disc",
-                    marginLeft: "30px",
-                    fontSize: "32px",
-                  }}
-                >
-                  {/* {member.name} */}
-                </li>
-              ))}
-            </ul>
-          </div>
         </section>
-        <section className="text-white w-[500px]">
-          <div className="flex justify-center lg:h-[604px] lg:items-end">
+
+        <section className="text-white flex flex-col justify-center lg-flex lg:flex-col">
+          <div className="w-52 h-52 flex mx-auto lg:items-end lg:w-96 lg:h-96">
             {selectedCrew && (
               <img
                 src={selectedCrew.images.png}
                 alt={selectedCrew.name}
-                className="w-56 h-56  mb-6 lg:w-96 lg:h-96 lg:mb-0"
+                className="object-contain w-full h-full lg:w-96 lg:h-96 lg:mb-0"
               />
             )}
           </div>
+          <ul className="lg:order-3s flex text-white justify-center mt-6">
+            {crew.map((member) => (
+              <li
+                key={member.name}
+                onClick={() => handleSelectCrew(member)}
+                className={`${
+                  selectedCrew?.name === member.name ? "text-blue-400" : ""
+                }`}
+                style={{
+                  listStyleType: "disc",
+                  marginLeft: "30px",
+                  fontSize: "32px",
+                }}
+              >
+                {/* {member.name} */}
+              </li>
+            ))}
+          </ul>
         </section>
       </div>
     </CrewLayout>
