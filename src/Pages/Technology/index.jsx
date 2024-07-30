@@ -37,7 +37,7 @@ export const Technology = () => {
                     // style={{ listStyleType: "disc", marginLeft: "20px" }}
                   >
                     <div className="flex gap-6 justify-center cursor-pointer">
-                      <span className="sm:hidden lg:block">{tech.number}</span>
+                      <span className="hidden lg:block">{tech.number}</span>
                       <span className="lg:hidden">{tech.name}</span>
                     </div>
                      
