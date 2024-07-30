@@ -10,7 +10,6 @@
     "preview": "vite preview",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
-    "homepage": "https://github.com/lingowmx/space-tourism",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "start": "vite"
@@ -33,5 +32,6 @@
     "postcss": "^8.4.39",
     "tailwindcss": "^3.4.4",
     "vite": "^5.3.1"
-  }
+  },
+  "homepage": "https://github.com/lingowmx/space-tourism"
 }
