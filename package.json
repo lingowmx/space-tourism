@@ -10,7 +10,9 @@
     "preview": "vite preview",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "homepage": "https://github.com/lingowmx/space-tourism"
+    "homepage": "https://github.com/lingowmx/space-tourism",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
   "dependencies": {
     "react": "^18.3.1",
