@@ -15,7 +15,7 @@ export const TechnologyLayout = ({children}) => {
           <source srcSet={desktopBackgroundDefault} media="(max-width: 1280px)"/>
           <img src={mobileBackgroundDefault} alt="mobile-background" className="w-full h-full object-cover"/>
         </picture>
-        <div className="absolute z-10 top-28 w-full p-4 lg:pr-0">
+        <div className="absolute z-10 top-28 w-full p-4 lg:pr-0 lg:pt-28">
           {children}
         </div>  
       </div>  

@@ -15,7 +15,7 @@ export const DestinationLayout = ({children}) => {
           <source srcSet={desktopBackgroundDefault} media="(max-width: 1280px)" className=""/>
           <img src={mobileBackgroundDefault} alt="mobile-background" className="w-full h-full object-cover"/>
         </picture>
-        <div className="absolute z-10 top-28 w-full p-4">
+        <div className="absolute z-10 top-28 w-full p-4 lg:pt-28">
           {children}
         </div>  
       </div>  

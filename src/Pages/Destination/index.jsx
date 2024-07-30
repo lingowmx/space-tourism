@@ -16,9 +16,9 @@ export const Destination = () => {
   };
   return (
     <DestinationLayout>
-      <div className="sm:text-2xl lg:flex">
+      <div className="sm:text-2xl lg:flex xl:place-content-between xl:px-28">
         <section className="lg:w-[500px]">
-          <h2 className="text-white flex max-w-96 place-content-around text-2xl tracking-wide mb-4 lg:max-w-ful lg:px-10">
+          <h2 className="text-white flex w-80  place-content-around text-2xl tracking-wide mb-4 lg:max-w-ful lg:px-10 lg:w-96 xl:text-4xl xl:w-[500px]">
             <span>01</span>
             <p>Pick your destination</p>
           </h2>
@@ -39,11 +39,11 @@ export const Destination = () => {
         </section>
         <section className="text-white flex flex-col w-full place-content-between lg:w-[500px] lg:place-content-around">
         <div className="w-full mb-4 lg:mt-8 lg:text-3xl">
-            <ul className="flex text-white justify-center">
+            <ul className="flex text-white justify-center xl:text-3xl">
               {destinations.map((destination) => (
                 <li
                   key={destination.name}
-                  className="cursor-pointer mr-4 hover:text-blue-500"
+                  className={`cursor-pointer mr-4 hover:text-blue-500 ${selectedDestination?.name === destination.name ? "text-blue-500": ""}`}
                   onClick={() => handleSelectDestination(destination)}
                 >
                   {destination.name}
@@ -57,7 +57,7 @@ export const Destination = () => {
                 <h2 className="mx-auto mb-4 text-5xl share-regular-italic lg:text-6xl">
                   {selectedDestination.name}
                 </h2>
-                <p className="text-center h-36 lg:text-xl lg:text-left lg:pb-8 lg:border-solid border-b-4 border-gray-400">
+                <p className="text-center h-36 lg:text-xl lg:text-left lg:pb-8 lg:border-solid border-b-4 border-gray-400 xl:text-2xl xl:h-52">
                   {selectedDestination.description}
                 </p>
                 <br className="border-4 border-gray-400 border-solid" />
