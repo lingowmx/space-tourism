@@ -1,7 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { CrewLayout } from "../../components/Layout/CrewLayout";
 import { SpaceContext } from "../../components/Layout/Context";
-
+// deploy npm run build && git subtree push --prefix dist origin main"
 export const Crew = () => {
   const { crew } = useContext(SpaceContext);
   const [selectedCrew, setSelectedCrew] = useState(null);
