@@ -61,6 +61,7 @@ export const Crew = () => {
                   listStyleType: "disc",
                   marginLeft: "30px",
                   fontSize: "32px",
+                  cursor: "pointer"
                 }}
               >
                 {/* {member.name} */}
